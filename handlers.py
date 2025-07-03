@@ -1,3 +1,5 @@
+import sys
+
 from telegram import Update
 from telegram.ext import CommandHandler, CallbackQueryHandler, MessageHandler, ContextTypes, filters
 from translator import translate
@@ -78,8 +80,7 @@ async def end(update: Update, context: ContextTypes.DEFAULT_TYPE):
     Завершает работу бота.
     """
     await update.message.reply_text('Работа завершена. Введите /start для повторного запуска.')
-    await context.application.shutdown()
-    await context.application.stop()
+    sys.exit()
 
 
 def register_handlers(app):
