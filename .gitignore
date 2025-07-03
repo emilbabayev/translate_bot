@@ -1,3 +1,58 @@
-.venv
-.idea
-__pycache__
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Environment files
+*.env
+.env.*
+
+# IDE/editor configs
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python packaging
+*.egg
+*.egg-info/
+dist/
+build/
+*.spec
+
+# Logs and debugging
+*.log
+*.out
+*.pid
+
+# MyPy / coverage / test cache
+.mypy_cache/
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Local SQLite / test DBs
+*.sqlite3
+*.db
+
+# Docker
+*.pid
+*.sock
+
+# Secrets and keys
+secrets.json
+*.pem
+*.key
