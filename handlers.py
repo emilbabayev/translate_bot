@@ -77,8 +77,9 @@ async def end(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """
     Завершает работу бота.
     """
-    context.user_data.clear()
     await update.message.reply_text('Работа завершена. Введите /start для повторного запуска.')
+    await context.application.shutdown()
+    await context.application.stop()
 
 
 def register_handlers(app):
