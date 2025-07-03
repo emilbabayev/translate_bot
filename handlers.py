@@ -2,7 +2,7 @@ from telegram import Update
 from telegram.ext import CommandHandler, CallbackQueryHandler, MessageHandler, ContextTypes, filters
 from translator import translate
 from settings import LANGUAGES
-from app.utils import get_language_keyboard
+from utils import get_language_keyboard
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):

@@ -1,6 +1,6 @@
 import asyncio
 import nest_asyncio
-from app.bot import TelegramBot
+from bot import TelegramBot
 
 
 if __name__ == '__main__':
