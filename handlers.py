@@ -61,7 +61,7 @@ async def reply_translated(update: Update, context: ContextTypes.DEFAULT_TYPE):
     Переводит отправленный текст на выбранный язык и отправляет в чат.
     """
     if context.user_data.get('active'):
-        user = update.message.from_user # имя отправителя
+        user_name = update.message.from_user.full_name # имя отправителя
         user_text = update.message.text # сообщение отправителя
         lang = context.user_data.get("lang")  # язык перевода
 
@@ -72,7 +72,8 @@ async def reply_translated(update: Update, context: ContextTypes.DEFAULT_TYPE):
             translated = await translate(user_text, lang) # переведенное сообщение
 
             await context.bot.send_message(chat_id=update.effective_chat.id,
-                                               text=f'{user.full_name}: {translated}')
+                                           text=f'*{user_name}*: {translated}',
+                                           parse_mode='Markdown')
         else:
             await context.bot.send_message(chat_id=update.effective_chat.id,
                                            text='Язык не выбран')
