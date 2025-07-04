@@ -1,9 +1,11 @@
 from telegram import BotCommand
+from dotenv import load_dotenv
 import os
 
 
-TOKEN = '7803134190:AAHT9RQ6KEs1dztLik_7Kk2G7A1Gui6FfCM'   # Токен созданного telegram-бота
-DEEPL_API_KEY = "afe361de-5310-461b-bba9-43459a26ffd5:fx"  # Токен DeepL API переводчика
+load_dotenv()
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+API_KEY = os.getenv("API_KEY")
 
 
 LANGUAGES = {
