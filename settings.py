@@ -4,8 +4,8 @@ import os
 
 
 load_dotenv()
-TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
-API_KEY = os.getenv("API_KEY")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+DEEPL_API_KEY = os.getenv("DEEPL_API_KEY")
 
 
 LANGUAGES = {

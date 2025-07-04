@@ -1,6 +1,6 @@
 from telegram.ext import ApplicationBuilder
 from handlers import register_handlers
-from settings import TOKEN, COMMANDS
+from settings import BOT_TOKEN, COMMANDS
 
 
 class TelegramBot:
@@ -11,7 +11,7 @@ class TelegramBot:
         """
         Инициализация бота по TOKEN
         """
-        self.app = ApplicationBuilder().token(TOKEN).build()
+        self.app = ApplicationBuilder().token(BOT_TOKEN).build()
 
     async def set_bot_commands(self) -> None:
         """
