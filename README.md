@@ -1,1 +1,2 @@
-<h1> Telegram-bot for translating </h1>
+<h1> LinguAmigo Bot </h1>
+Translate your message into different languages
